@@ -15,6 +15,7 @@ public class TeacherServiceImpl  {
     private  TeacherRepo repo ;
 
     public void insertTeacher(Teacher t1){
+
         repo.save(t1);
     }
 
@@ -36,4 +37,7 @@ public class TeacherServiceImpl  {
     }
 
 
+    public Teacher getByEmail(String email) {
+        return repo.findByEmail(email);
+    }
 }
